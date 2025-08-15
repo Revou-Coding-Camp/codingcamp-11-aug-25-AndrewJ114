@@ -1,35 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-
-    <!-- CSS External -->
-    <link rel="stylesheet" href="CSS\style.css">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andrew Jonathan Lay Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8f8f8;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(41, 41, 41, 0.1);
+    }
+    nav .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+    nav .nav-links li {
+      display: inline;
+    }
+    nav .nav-links a {
+      text-decoration: none;
+      color: #2e2e2e;
+      padding: 8px 12px;
+      border-radius: 5px;
+      background-color: #e0e0e0;
+      transition: background-color 0.3s;
+    }
+    nav .nav-links a:hover {
+      background-color: #333333;
+    }
+    .logo {
+      height: 50px;
+    }
+  </style>
 </head>
-
 <body>
+  <!-- NAVIGATION -->
+  <nav>
+    <img src="Images/logo.jpg" alt="Logo" class="logo">
+    <ul class="nav-links">
+      <li><a href="#" onclick="showSection('home')">Home</a></li>
+      <li><a href="#" onclick="showSection('profile')">Profile</a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Main Header --> 
-    <header>
-
+  <!-- HOME SECTION -->
+  <section id="home" class="section active">
+    <header class="banner">
+      <h1 id="welcome-message">Hi, </h1>
     </header>
+  </section>
 
-    <!-- Main content -->
-    <main>
-
+  <!-- PROFILE SECTION -->
+  <section id="profile" class="section">
+    <main class="profile-content">
+      <section>
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm <strong>Andrew Jonathan Lay</strong>, a university student currently studying in Guangzhou, China at the 
+          <strong>South China University of Technology (SCUT)</strong>. I'm passionate about technology, coding, and continuous learning.
+          My academic journey is helping me grow not only as a developer, but also as a global thinker.
+        </p>
+      </section>
+      <section>
+        <h2>Vision</h2>
+        <p>
+          To become a well-rounded and skilled IT professional who contributes meaningfully to the tech community, both academically and practically.
+        </p>
+      </section>
+      <section>
+        <h2>Mission</h2>
+        <ul>
+          <li>Learn and master various areas of computer science and software development.</li>
+          <li>Participate in meaningful projects that solve real-world problems.</li>
+          <li>Collaborate with peers, mentors, and professionals to expand my knowledge.</li>
+          <li>To be curious, to stay humble, and to always keep learning.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Exploring new programming languages and tools</li>
+          <li>Participating in coding competitions</li>
+          <li>Photography and visual design</li>
+          <li>Playing music and digital audio editing</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li>Web Development (HTML, CSS, JavaScript)</li>
+          <li>Python, C++, and SQL</li>
+          <li>Database Management</li>
+          <li>UI/UX Design</li>
+        </ul>
+      </section>
     </main>
+  </section>
 
-    <!-- Footer -->
-    <footer>
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section form-container">
+    <h2>Message Us</h2>
+    <form id="messageForm">
+      <label>Name:<input type="text" id="name" required></label>
+      <label>Email:<input type="email" id="email" required></label>
+      <label>Message:<textarea id="message" required></textarea></label>
+      <button type="submit">Submit</button>
+    </form>
 
-    </footer>
-    <!--JS External-->
-    <script src="Js\script.js"></script>
+    <div id="submittedData"></div>
+
+    <div class="contact-info" style="margin-top: 20px;">
+      <h3>Contact Me</h3>
+      <p><strong>Address:</strong> Jl. Boulevard Raya, Klp. Gading Tim., Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14240</p>
+      <p><strong>Phone:</strong> +6289506555022</p>
+      <p><strong>Email:</strong> <a href="mailto:andrewjlay9@gmail.com">andrewjlay9@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- SCRIPT -->
+  <script src="js/script.js"></script>
 </body>
-
 </html>
